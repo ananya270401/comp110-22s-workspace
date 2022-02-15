@@ -1,8 +1,8 @@
-"""Exercise 2 One Shot Wordle"""
+"""Exercise 2 One Shot Wordle!"""
 
-__author__ = 730466694
+__author__ = "730466694"
 
-secret_word: str = "py"
+secret_word: str = "python"
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -30,7 +30,7 @@ while check_index < len(secret_word):
         while check_yellow is not True and alternate_index < len(secret_word):
             """if the alternate index of secret word is equal to alternate index of user inputed word, then print yellow box"""
             if secret_word[alternate_index] == user_word[check_index]:
-                check_yellow: bool = True
+                check_yellow = True
             else:
                 alternate_index = alternate_index + 1
         if check_yellow is True:

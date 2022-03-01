@@ -65,7 +65,7 @@ def rectangle(raphael: Turtle, x: float, y: float) -> None:
     raphael.end_fill()
 
 
-def starry_night(raphael: Turtle) -> None:
+def sunny_day(raphael: Turtle) -> None:
     """Sun in the sky and a person lying on the ground!"""
     circle(raphael, randint(-300, 300), randint(10, 250))
     rectangle(raphael, -10, -250)
@@ -78,7 +78,7 @@ def starry_night(raphael: Turtle) -> None:
 def main() -> None:
     """The entrypoint of my scene."""
     raphael: Turtle = Turtle()
-    starry_night(raphael)
+    sunny_day(raphael)
     done()
 
 

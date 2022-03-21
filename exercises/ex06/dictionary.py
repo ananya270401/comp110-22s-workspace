@@ -9,12 +9,24 @@ def invert(inversion: dict[str, str]) -> dict[str, str]:
     for key, value in inversion.items():
         new_invert[value] = key
     return new_invert
-    
 
+    
 def favorite_color(color: dict[str, str]) -> str:
     """When given a colors, it returns the most popular color."""  
-    return ""
-
+    new_color = {}
+    for key, value in color.items():
+        if value in new_color:
+            new_color[value] = new_color[value] + 1
+        else:
+            new_color[value] = 1
+    colors = 0
+    counter = 0
+    for keys, value in new_color.items():
+        if value > counter:
+            colors = keys
+            counter = value
+    return(str(colors))
+        
 
 def count(number: list[str]) -> dict[str, int]:
     """Counts the number of times a value appears in a list."""
